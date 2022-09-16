@@ -1,16 +1,15 @@
 def fizzbuzz(num)
   ret = ""
-  if (num % 3 == 0)
+  if (num % 3 == 0) && (num % 5 == 0)
+    ret = "FizzBuzz"
+  elsif (num % 3 == 0)
     ret = "Fizz"
   elsif (num % 5 == 0)
     ret = "Buzz"
-  elsif
+  else
     ret = num.to_s
   end
 
-  if (num % 3 == 0) && (num % 5 == 0)
-    ret = "FizzBuzz"
-  end
   return ret
 end
 
@@ -21,7 +20,7 @@ num_max = 100
 # end
 
 i = 1
-while i <= num_max do
+while i <= num_max 
   puts fizzbuzz(i)
   i += 1
 end
